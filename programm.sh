@@ -8,11 +8,23 @@ echo "-------------------------------------------------------"
 echo "Teste verbindung zu AWS:"
 # testen ob aws verfügbar und verbunden ist
 $current_directory/scripts/checkIfAWS.sh
+if [[ $? -eq 1 ]]; then
+	echo "-------------------------------------------------------"
+	echo "PROGRAMM FRÜHZEITIG BEENDET"
+	echo "-------------------------------------------------------"
+	exit 1
+fi
 
 echo "-------------------------------------------------------"
 echo "Teste ob das Bild hochgeladen wurde:"
 # testen ob aws verfügbar und verbunden ist
 $current_directory/scripts/checkIfImage.sh
+if [[ $? -eq 1 ]]; then
+  echo "-------------------------------------------------------"
+  echo "PROGRAMM FRÜHZEITIG BEENDET"
+  echo "-------------------------------------------------------"
+  exit 1
+fi
 
 echo "-------------------------------------------------------"
 echo "Erstelle S3 Buckets:"
@@ -47,11 +59,23 @@ name_download="bucketamarubrianlinodownload$counter"
 
 # s3 buckets erstellen
 $current_directory/scripts/createS3Containers.sh $name_upload $name_download
+if [[ $? -eq 1 ]]; then
+  echo "-------------------------------------------------------"
+  echo "PROGRAMM FRÜHZEITIG BEENDET"
+  echo "-------------------------------------------------------"
+  exit 1
+fi
 
 echo "-------------------------------------------------------"
 echo "Bild hochladen:"
 # s3 buckets erstellen
 $current_directory/scripts/uploadNewImage.sh $name_upload
+if [[ $? -eq 1 ]]; then
+  echo "-------------------------------------------------------"
+  echo "PROGRAMM FRÜHZEITIG BEENDET"
+  echo "-------------------------------------------------------"
+  exit 1
+fi
 
 echo "-------------------------------------------------------"
 echo "PROGRAMM BEENDET"

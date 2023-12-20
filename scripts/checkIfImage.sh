@@ -12,8 +12,9 @@ if [ -e "$bildpfad" ]; then
 		echo "image.jpg existiert und ist ein Bild."
 	else
 		echo "image.jpg existiert, ist jedoch kein Bild. Bitte lade ein gültiges Bild hoch."
+		exit 1
 	fi
 else
 	echo "image.jpg existiert noch nicht. Bitte lade zuerst ein Bild hoch."
-	exit 1
+	exit 1 
 fi

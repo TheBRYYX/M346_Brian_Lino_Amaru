@@ -1,0 +1,1 @@
+In diesem Ordner sollte das zu komprimierende Bild als namens image.jpg hochgeladen werden.

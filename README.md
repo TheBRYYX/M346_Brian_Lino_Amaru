@@ -34,3 +34,5 @@ Schrib eif din shit do ine
 Das Projekt war sehr anspruchsvoll.
 Mir viel es schwer die Zusammenhänge zu verstehen. Die Arbeitsteilung ging bei uns nicht sehr gut, da wir an sehr unterschiedlichen Zeiten am Projekt gearbeitet haben.
 To be continued...
+### Arbeitsteilung
+Von Beginn an, haben wir die Arbeit so aufgeteilt, dass Lino Zubler sich um die S3 Container und die Grundstruktur der Bash-Skripts kümmert und Amaru Eugster und Brian Furlan sich um die Erstellung und Programmierung der Lambda Funktion kümmern.
